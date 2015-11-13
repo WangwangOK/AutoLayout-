@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+  @IBAction func tap(sender: UITapGestureRecognizer) {
+    self.performSegueWithIdentifier("ToSecond", sender: self)
+  }
 
 }
 

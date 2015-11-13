@@ -12,6 +12,10 @@
 		331020CF1BF4DEC500DFC7FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331020CD1BF4DEC500DFC7FE /* Main.storyboard */; };
 		331020D11BF4DEC500DFC7FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 331020D01BF4DEC500DFC7FE /* Assets.xcassets */; };
 		331020D41BF4DEC500DFC7FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 331020D21BF4DEC500DFC7FE /* LaunchScreen.storyboard */; };
+		331020DC1BF4E3B200DFC7FE /* SecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331020DB1BF4E3B200DFC7FE /* SecViewController.swift */; };
+		331020DE1BF4E71100DFC7FE /* ScorllLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331020DD1BF4E71100DFC7FE /* ScorllLayoutViewController.swift */; };
+		331020E01BF4F0B800DFC7FE /* ForthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331020DF1BF4F0B800DFC7FE /* ForthViewController.swift */; };
+		331020E21BF4F68300DFC7FE /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331020E11BF4F68300DFC7FE /* FifthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		331020D01BF4DEC500DFC7FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		331020D31BF4DEC500DFC7FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		331020D51BF4DEC500DFC7FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		331020DB1BF4E3B200DFC7FE /* SecViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecViewController.swift; sourceTree = "<group>"; };
+		331020DD1BF4E71100DFC7FE /* ScorllLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScorllLayoutViewController.swift; sourceTree = "<group>"; };
+		331020DF1BF4F0B800DFC7FE /* ForthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForthViewController.swift; sourceTree = "<group>"; };
+		331020E11BF4F68300DFC7FE /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,10 @@
 			children = (
 				331020C91BF4DEC500DFC7FE /* AppDelegate.swift */,
 				331020CB1BF4DEC500DFC7FE /* ViewController.swift */,
+				331020DB1BF4E3B200DFC7FE /* SecViewController.swift */,
+				331020DD1BF4E71100DFC7FE /* ScorllLayoutViewController.swift */,
+				331020DF1BF4F0B800DFC7FE /* ForthViewController.swift */,
+				331020E11BF4F68300DFC7FE /* FifthViewController.swift */,
 				331020CD1BF4DEC500DFC7FE /* Main.storyboard */,
 				331020D01BF4DEC500DFC7FE /* Assets.xcassets */,
 				331020D21BF4DEC500DFC7FE /* LaunchScreen.storyboard */,
@@ -136,8 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				331020E21BF4F68300DFC7FE /* FifthViewController.swift in Sources */,
 				331020CC1BF4DEC500DFC7FE /* ViewController.swift in Sources */,
 				331020CA1BF4DEC500DFC7FE /* AppDelegate.swift in Sources */,
+				331020DE1BF4E71100DFC7FE /* ScorllLayoutViewController.swift in Sources */,
+				331020DC1BF4E3B200DFC7FE /* SecViewController.swift in Sources */,
+				331020E01BF4F0B800DFC7FE /* ForthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
