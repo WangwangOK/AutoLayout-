@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ede-7D-MZP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ede-7D-MZP">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -506,7 +506,18 @@
                             <constraint firstAttribute="trailing" secondItem="vpM-AA-pxm" secondAttribute="trailing" id="z7L-Be-23k"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="根据图片大小改变容器约束" id="q1N-tY-Vcl"/>
+                    <navigationItem key="navigationItem" title="根据图片大小改变容器约束" id="q1N-tY-Vcl">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="9QF-Oi-h0R">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HJ7-s4-qXX">
+                                <rect key="frame" x="233" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="W1q-cl-yP3" kind="show" id="MAK-Pf-RKD"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bottomAspect" destination="H3p-Tu-wwl" id="w4T-DW-XAA"/>
                         <outlet property="bottomImgViews" destination="0MD-qP-bgI" id="X3J-N6-1Eu"/>
@@ -520,6 +531,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTJ-vh-pNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3182" y="349"/>
+        </scene>
+        <!--BottomView到上面的最小距离-->
+        <scene sceneID="XNW-Oe-5eU">
+            <objects>
+                <viewController id="W1q-cl-yP3" customClass="SevenViewController" customModule="AutoLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3bS-SS-8Bs"/>
+                        <viewControllerLayoutGuide type="bottom" id="aWB-DV-c5O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tuq-SA-guv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6j6-sh-YMx">
+                                <rect key="frame" x="51" y="100" width="94" height="29"/>
+                                <connections>
+                                    <action selector="leftsteper:" destination="W1q-cl-yP3" eventType="valueChanged" id="vjg-Uh-b2R"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Vbm-QD-ABf">
+                                <rect key="frame" x="176" y="100" width="94" height="29"/>
+                                <connections>
+                                    <action selector="rightsteper:" destination="W1q-cl-yP3" eventType="valueChanged" id="cOM-hN-yuK"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom space &gt;= 15,这个约束的Priority的值应该要小于label的hugging的Priority的值" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iF2-Zv-xPk">
+                                <rect key="frame" x="165" y="144" width="115" height="101"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGM-Pp-tcD">
+                                <rect key="frame" x="40" y="260" width="240" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.39215686274509803" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kvX-yG-5z8"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这个约束范例来源于SwfitGG中的一个例子，稍加改动之后得到" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2K-yT-4Qj">
+                                <rect key="frame" x="40" y="144" width="115" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iF2-Zv-xPk" firstAttribute="trailing" secondItem="nGM-Pp-tcD" secondAttribute="trailing" id="0ru-Xe-dVy"/>
+                            <constraint firstItem="iF2-Zv-xPk" firstAttribute="width" secondItem="U2K-yT-4Qj" secondAttribute="width" id="8aV-mC-1Pv"/>
+                            <constraint firstItem="nGM-Pp-tcD" firstAttribute="top" relation="lessThanOrEqual" secondItem="iF2-Zv-xPk" secondAttribute="bottom" priority="250" constant="15" id="AWu-rI-xp7"/>
+                            <constraint firstItem="U2K-yT-4Qj" firstAttribute="leading" secondItem="nGM-Pp-tcD" secondAttribute="leading" id="Eb3-qq-kaF"/>
+                            <constraint firstItem="nGM-Pp-tcD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iF2-Zv-xPk" secondAttribute="bottom" constant="15" id="FKD-iW-B96"/>
+                            <constraint firstItem="U2K-yT-4Qj" firstAttribute="top" secondItem="6j6-sh-YMx" secondAttribute="bottom" constant="15" id="LvU-me-tAX"/>
+                            <constraint firstItem="Vbm-QD-ABf" firstAttribute="centerX" secondItem="iF2-Zv-xPk" secondAttribute="centerX" id="PzQ-dr-eir"/>
+                            <constraint firstItem="nGM-Pp-tcD" firstAttribute="leading" secondItem="tuq-SA-guv" secondAttribute="leading" constant="40" id="TpA-GN-MPB"/>
+                            <constraint firstItem="6j6-sh-YMx" firstAttribute="top" secondItem="3bS-SS-8Bs" secondAttribute="bottom" constant="36" id="Vb6-Td-bdv"/>
+                            <constraint firstItem="nGM-Pp-tcD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="U2K-yT-4Qj" secondAttribute="bottom" constant="15" id="eAQ-3R-tWY"/>
+                            <constraint firstItem="Vbm-QD-ABf" firstAttribute="top" secondItem="3bS-SS-8Bs" secondAttribute="bottom" constant="36" id="imP-bA-z55"/>
+                            <constraint firstItem="iF2-Zv-xPk" firstAttribute="top" secondItem="Vbm-QD-ABf" secondAttribute="bottom" constant="15" id="itv-Ep-Pk1"/>
+                            <constraint firstItem="aWB-DV-c5O" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nGM-Pp-tcD" secondAttribute="bottom" constant="15" id="oJk-bO-021"/>
+                            <constraint firstAttribute="trailing" secondItem="nGM-Pp-tcD" secondAttribute="trailing" constant="40" id="ojU-Ww-gk3"/>
+                            <constraint firstItem="iF2-Zv-xPk" firstAttribute="leading" secondItem="U2K-yT-4Qj" secondAttribute="trailing" constant="10" id="uLF-VF-Zqb"/>
+                            <constraint firstItem="6j6-sh-YMx" firstAttribute="centerX" secondItem="U2K-yT-4Qj" secondAttribute="centerX" id="vtt-IN-r8A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="BottomView到上面的最小距离" id="6Fe-PM-DBQ"/>
+                    <connections>
+                        <outletCollection property="labels" destination="U2K-yT-4Qj" collectionClass="NSMutableArray" id="Oxr-PK-bVG"/>
+                        <outletCollection property="labels" destination="iF2-Zv-xPk" collectionClass="NSMutableArray" id="O5u-oK-Slw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZq-1E-1pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3644" y="357"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QP8-cR-9N4">
